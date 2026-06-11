@@ -1,0 +1,1 @@
+# django-rest-music-platform
