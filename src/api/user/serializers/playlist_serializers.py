@@ -12,4 +12,5 @@ class PlaylistCreateSerializers(ModelSerializer):
     class Meta:
         model = Playlist
         fields = '__all__'
+        read_only_fields = ['saves_count', 'musics_count']
 

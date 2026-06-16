@@ -21,14 +21,10 @@ urlpatterns = [
 
     path('favplaylist/', userfavourite_playlist_views.FavouritePlaylistListApiView.as_view()),
     path('favplaylist/create/', userfavourite_playlist_views.FavouritePlaylistCreateAPIView.as_view()),
-    path('favplaylist/detail/<int:pk>/', userfavourite_playlist_views.FavouritePlaylistRetrieveAPIView.as_view()),
-    path('favplaylist/update/<int:pk>/', userfavourite_playlist_views.FavouritePlaylistUpdateAPIView.as_view()),
     path('favplaylist/delete/<int:pk>/', userfavourite_playlist_views.FavouritePlaylistDestroyAPIView.as_view()),
 
     path('favourite/', userfavourite_views.FavouriteListApiView.as_view()),
     path('favourite/create/', userfavourite_views.FavouriteCreateAPIView.as_view()),
-    path('favourite/detail/<int:pk>/', userfavourite_views.FavouriteRetrieveAPIView.as_view()),
-    path('favourite/update/<int:pk>/', userfavourite_views.FavouriteUpdateAPIView.as_view()),
     path('favourite/delete/<int:pk>/', userfavourite_views.FavouriteDestroyAPIView.as_view()),
     # path('', include(router.urls)),
     # path('restaurant/', RestaurantViewset.as_view({'get': 'list','post':'create'}), name='restaurant-detail'),

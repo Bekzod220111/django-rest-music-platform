@@ -13,3 +13,8 @@ class MusicCreateSerializers(ModelSerializer):
         model = Music
         fields = '__all__'
 
+class MusicUpdateSerializers(ModelSerializer):
+
+    class Meta:
+        model = Music
+        fields = ['name', 'is_public', 'picture', 'lyrics', 'source', 'playlist']
