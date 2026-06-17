@@ -32,11 +32,12 @@ class FavouriteCreateAPIView(CreateAPIView):
         }, status=status.HTTP_201_CREATED)
 
 class FavouriteDestroyAPIView(DestroyAPIView):
+    queryset = Favourite.objects.all()
     permission_classes = [IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
-        if request.user == instance.author:
+        if request.user == instance.user:
             instance.delete()
             status_code = status.HTTP_204_NO_CONTENT
         else:
